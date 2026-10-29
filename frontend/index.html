@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#11162b">
+    <title>Smash Bros. Ultimate | Fighter Hub</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="barra-superior"><span>FIGHTER HUB</span><span>SUPER SMASH BROS. ULTIMATE</span><span class="punto-en-linea">● ARENA LISTA</span></div>
+    <header class="encabezado">
+        <a class="marca" href="#inicio" aria-label="Inicio Smash Bros. Ultimate">
+            <img src="smash-ultimate-logo.svg" alt="Super Smash Bros. Ultimate" class="logo-smash">
+        </a>
+        <nav class="navegacion">
+            <a href="#guia">Luchadores</a>
+            <a href="#formulario-panel">Mi roster</a>
+            <a href="#coleccion">Colección</a>
+        </nav>
+        <span class="estado"><i></i> MODO JUGADOR</span>
+    </header>
+
+    <main class="contenedor" id="inicio">
+        <section class="hero">
+            <div class="hero-contenido">
+                <span class="etiqueta etiqueta-hero">¡ELIGE A TU LUCHADOR!</span>
+                <h1>Tu colección.<br><span>Tu campo de batalla.</span></h1>
+                <p>Registra tus fighters favoritos, sus series, movimientos especiales y escenarios para crear tu propio roster.</p>
+                <a class="boton-hero" href="#formulario-panel">CREAR LUCHADOR <b>↗</b></a>
+            </div>
+            <div class="hero-emblema" aria-hidden="true"><div class="cruz-smash"><span></span></div><b>READY<br>TO FIGHT!</b></div>
+            <div class="hero-etiqueta">FIGHTER<br>SELECT</div>
+        </section>
+
+        <section class="franja-datos">
+            <div class="dato"><span class="dato-icono amarillo">★</span><div><strong id="total">0</strong><small>FIGHTERS EN TU ROSTER</small></div></div>
+            <div class="dato"><span class="dato-icono azul">⚡</span><div><strong>ALL-STAR</strong><small>UNA COLECCIÓN A TU ESTILO</small></div></div>
+            <div class="dato"><span class="dato-icono rosa">✦</span><div><strong>SMASH!</strong><small>¡QUE COMIENCE EL COMBATE!</small></div></div>
+        </section>
+
+        <section class="seccion-guia" id="guia">
+            <div class="encabezado-seccion">
+                <div><span class="sobre-titulo">CONOCE A LOS FIGHTERS</span><h2>Ejemplos para tu roster</h2></div>
+                <p>Selecciona un personaje para usar sus datos como ejemplo en el formulario.</p>
+            </div>
+            <div class="guia-grid">
+                <article class="guia-card mario">
+                    <div class="personaje-icono">🍄</div><div class="guia-info"><span class="serie">SUPER MARIO</span><h3>Mario</h3><p>Bola de fuego y Mario Tornado</p><button type="button" class="usar-ejemplo" data-ejemplo="mario">USAR EJEMPLO <span>＋</span></button></div>
+                </article>
+                <article class="guia-card link">
+                    <div class="personaje-icono">🗡️</div><div class="guia-info"><span class="serie">THE LEGEND OF ZELDA</span><h3>Link</h3><p>Arco, bumerán y bomba remota</p><button type="button" class="usar-ejemplo" data-ejemplo="link">USAR EJEMPLO <span>＋</span></button></div>
+                </article>
+                <article class="guia-card kirby">
+                    <div class="personaje-icono">⭐</div><div class="guia-info"><span class="serie">KIRBY</span><h3>Kirby</h3><p>Tragar y copiar habilidades</p><button type="button" class="usar-ejemplo" data-ejemplo="kirby">USAR EJEMPLO <span>＋</span></button></div>
+                </article>
+                <article class="guia-card pikachu">
+                    <div class="personaje-icono">⚡</div><div class="guia-info"><span class="serie">POKÉMON</span><h3>Pikachu</h3><p>Rayo y Placaje Eléctrico</p><button type="button" class="usar-ejemplo" data-ejemplo="pikachu">USAR EJEMPLO <span>＋</span></button></div>
+                </article>
+            </div>
+            <p class="aclaracion">Los estilos de combate son categorías de esta colección, no clases oficiales del juego.</p>
+        </section>
+
+        <section class="panel-formulario" id="formulario-panel">
+            <div class="titulo-panel"><div><span class="sobre-titulo">PERSONALIZA TU SELECCIÓN</span><h2 id="titulo-formulario">Añadir luchador</h2></div><span class="insignia">PLAYER 1</span></div>
+            <form id="formulario">
+                <div class="campos">
+                    <label>Nombre del personaje<input id="nombre" name="nombre" maxlength="100" placeholder="Ej. Mario" required></label>
+                    <label>Serie o franquicia<input id="franquicia" name="franquicia" maxlength="100" placeholder="Ej. Super Mario" required></label>
+                    <label>Estilo de combate
+                        <select id="tipo_luchador" name="tipo_luchador" required>
+                            <option value="">Selecciona un estilo</option><option>Equilibrado</option><option>Velocista</option><option>Pesado</option><option>Proyectiles</option><option>Espadachín</option><option>Aéreo</option><option>Técnico</option><option>Otro</option>
+                        </select>
+                    </label>
+                    <label>Movimiento o habilidad especial<input id="habilidad" name="habilidad" maxlength="120" placeholder="Ej. Bola de fuego" required></label>
+                    <label class="campo-completo">Escenario relacionado<input id="escenario" name="escenario" maxlength="120" placeholder="Ej. Reino Champiñón" required></label>
+                </div>
+                <div class="acciones"><button class="boton principal" id="guardar" type="submit">＋ GUARDAR LUCHADOR</button><button class="boton secundario oculto" id="cancelar" type="button">CANCELAR EDICIÓN</button><span id="mensaje" role="status" aria-live="polite"></span></div>
+            </form>
+        </section>
+
+        <section class="seccion-listado" id="coleccion">
+            <div class="titulo-listado"><div><span class="sobre-titulo">TU SELECCIÓN PERSONAL</span><h2>Mi roster</h2></div><input id="busqueda" class="busqueda" placeholder="⌕ Buscar personaje..." aria-label="Buscar personaje"></div>
+            <div id="lista" class="rejilla"><p class="vacio">Preparando la selección...</p></div>
+        </section>
+        <div class="frase-final"><span>✦</span> ¡SMASH IT UP! <span>✦</span></div>
+    </main>
+    <footer><img src="smash-ultimate-logo.svg" alt="Super Smash Bros. Ultimate"><span>FAN PROJECT · FIGHTER COLLECTION</span></footer>
+    <script src="funciones.js"></script>
+</body>
+</html>

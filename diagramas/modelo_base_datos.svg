@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560">
+<rect width="900" height="560" fill="#f5f6fa"/>
+<text x="450" y="55" font-family="Arial" font-size="28" font-weight="bold" text-anchor="middle" fill="#171923">Modelo de base de datos — Smash Bros Manager</text>
+<rect x="250" y="95" width="400" height="390" rx="12" fill="#ffffff" stroke="#333746" stroke-width="2"/>
+<path d="M250 107 Q250 95 262 95 H638 Q650 95 650 107 V160 H250 Z" fill="#ffd52e"/>
+<text x="450" y="136" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#191919">PERSONAJES</text>
+<g font-family="Arial" font-size="19" fill="#242632">
+<text x="290" y="205">🔑 id : INTEGER (PK)</text>
+<text x="290" y="250">nombre : TEXT NOT NULL</text>
+<text x="290" y="295">franquicia : TEXT NOT NULL</text>
+<text x="290" y="340">tipo_luchador : TEXT NOT NULL</text>
+<text x="290" y="385">habilidad : TEXT NOT NULL</text>
+<text x="290" y="430">escenario : TEXT NOT NULL</text>
+</g>
+<text x="450" y="525" font-family="Arial" font-size="16" text-anchor="middle" fill="#555b6b">Una tabla independiente; no requiere llaves foráneas.</text>
+</svg>
